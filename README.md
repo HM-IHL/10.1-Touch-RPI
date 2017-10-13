@@ -1,7 +1,7 @@
 # 10.1-Touch-RPI
 Python Touchscreen Right Click
 
-This project implements right click functionality using a touchscreen on an Ubuntu system using the evdev library. Because of unity's deep integration with multitouch gestures, it disallows many other systems from implementing basic gestures that (IMHO) are missing from the default multitouch gestures. This script will not override unity's gestures, but fill in some missing ones, working alongside unity's multitouch system. (Also tested in gnome-shell given gnome-shell's incomplete implementation of right click touch)
+This project implements right click functionality using a touchscreen on an Linux system using the evdev library. Because of unity's deep integration with multitouch gestures, it disallows many other systems from implementing basic gestures that (IMHO) are missing from the default multitouch gestures. This script will not override unity's gestures, but fill in some missing ones, working alongside unity's multitouch system. (Also tested in gnome-shell given gnome-shell's incomplete implementation of right click touch)
 
 Implemented gestures
 
