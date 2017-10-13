@@ -1,9 +1,9 @@
 # 10.1-Touch-RPI
 Python Touchscreen Right Click
 
-This project implements right click functionality using a touchscreen on an Linux system using the evdev library. Because of unity's deep integration with multitouch gestures, it disallows many other systems from implementing basic gestures that (IMHO) are missing from the default multitouch gestures. This script will not override unity's gestures, but fill in some missing ones, working alongside unity's multitouch system. (Also tested in gnome-shell given gnome-shell's incomplete implementation of right click touch)
+This project implements right click functionality using a touchscreen on an Linux system using the evdev library. Because of unity's deep integration with multitouch gestures, it disallows many other systems from implementing basic gestures that are missing from the default multitouch gestures. This script will not override unity's gestures, but fill in some missing ones, working alongside unity's multitouch system.
 
-Implemented gestures
+Implemented gestures:
 
 Two gesture options have been implemented for right click:
 
@@ -11,9 +11,9 @@ Two gesture options have been implemented for right click:
 2 finger tap
 Setting up script
 
-To modify the delay for your right click, open the script in a text editor and modify the self.click_delay variable, the default is 1.5 seconds.
+To modify the delay for your right click, open the script in a text editor and modify the self.click_delay variable, the default is 0.5 seconds.
 
-To install please follow the instructions below:
+To install on a Raspberry Pi please follow the instructions below:
 
 1) Install Dependencies:
 
