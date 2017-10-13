@@ -11,8 +11,6 @@ Two gesture options have been implemented for right click:
 2 finger tap
 Setting up script
 
-Install requirements (python evdev). Will work in either Python 2.7 or 3.4+ *tested. This has been tested on Ubuntu 14.04, 15.04, & 16.04 with an ELAN/Atmel touchscreen on Lenovo Yoga 2 pro, and Surface Pro 2.
-
 To modify the delay for your right click, open the script in a text editor and modify the self.click_delay variable, the default is 1.5 seconds.
 
 To install please follow the instructions below:
