@@ -16,7 +16,8 @@ To modify the delay for your right click, open the script in a text editor and m
 To install please follow the instructions below:
 
 1) Install Dependencies:
-sudo apt-get install libts-bin evtest xinput python-dev python-pip
+
+    sudo apt-get install libts-bin evtest xinput python-dev python-pip
 
     then:
 
