@@ -22,17 +22,40 @@ sudo apt-get install libts-bin evtest xinput python-dev python-pip
 
     sudo pip install pyuserinput
 
-2) Clone repository:
+2) Change directory:
+
+cd /
+
+3) Clone repository:
+
 sudo git clone https://github.com/HM-IHL/10.1-Touch-RPI.git
 
-3) Change Directory:
+4) Change Directory:
+
 cd 10.1-Touch-RPI
 
-4) Install python evdev:
+5) Install python evdev:
+
 sudo python setup.py install
 
-5) Change directory:
+6) Change directory:
+
 cd Python_Touchscreen_Rightclick
 
-6) Now you can run the software:
+7) Now you can run the software:
+
 sudo python Python_Touchscreen_RightClick.py
+
+Optional:
+To make the code run at boot up, add to rc.local
+
+8) Edit rc.local:
+
+sudo nano /etc/rc.local
+
+9) Add the following line before exit 0:
+
+sudo python /home/pi/10.1-Touch-RPI/Python_Touchscreen_Rightclick/Python_Touchscreen_RightClick.py
+
+10) Reboot the Pi:
+sudo reboot
