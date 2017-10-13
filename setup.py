@@ -47,7 +47,6 @@ kw = {
     'version':              '0.7.0',
 
     'description':          'Bindings to the Linux input handling subsystem',
-    'long_description':     open(pjoin(here, 'README.rst')).read(),
 
     'author':               '',
     'author_email':         '',
