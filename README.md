@@ -18,9 +18,9 @@ To install please follow the instructions below:
 1) Install Dependencies:
 sudo apt-get install libts-bin evtest xinput python-dev python-pip
 
-then:
+    then:
 
-sudo pip install pyuserinput
+    sudo pip install pyuserinput
 
 2) Clone repository:
 sudo git clone https://github.com/HM-IHL/10.1-Touch-RPI
