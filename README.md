@@ -28,5 +28,8 @@ sudo git clone https://github.com/HM-IHL/10.1-Touch-RPI
 3) Change Directory:
 cd 10.1-Touch-RPI
 
-4) Now you can run the software:
+4) Install python evdev:
+sudo python setup.py install
+
+5) Now you can run the software:
 sudo python Python-Touchscreen-RightClick
