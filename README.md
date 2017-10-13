@@ -23,7 +23,7 @@ sudo apt-get install libts-bin evtest xinput python-dev python-pip
     sudo pip install pyuserinput
 
 2) Clone repository:
-sudo git clone https://github.com/HM-IHL/10.1-Touch-RPI
+sudo git clone https://github.com/HM-IHL/10.1-Touch-RPI.git
 
 3) Change Directory:
 cd 10.1-Touch-RPI
@@ -32,4 +32,4 @@ cd 10.1-Touch-RPI
 sudo python setup.py install
 
 5) Now you can run the software:
-sudo python Python-Touchscreen-RightClick
+sudo python Python_Touchscreen_RightClick.py
