@@ -31,5 +31,8 @@ cd 10.1-Touch-RPI
 4) Install python evdev:
 sudo python setup.py install
 
-5) Now you can run the software:
+5) Change directory:
+cd Python_Touchscreen_Rightclick
+
+6) Now you can run the software:
 sudo python Python_Touchscreen_RightClick.py
