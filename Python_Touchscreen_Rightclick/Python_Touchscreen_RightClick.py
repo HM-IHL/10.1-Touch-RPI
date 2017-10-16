@@ -25,7 +25,7 @@ class TrackedEvent(object):
     """
 
     def __init__(self, dev, abilities, var_x, var_y,
-                 use_pymouse=True, long_press_workaround=False):
+                 use_pymouse=True, long_press_workaround=True):
         """ Initialize tracking attributes. """
         self.dev = dev
         self.abilities = abilities
@@ -35,9 +35,9 @@ class TrackedEvent(object):
         self.fingers = 0
         self.total_event_fingers = 0
         self.discard = 0
-        self.moved = 0 
+        self.moved = 0
         self.track_start = None
-        self.click_delay = 1.5
+        self.click_delay = 1
         self.long_pressed = False
         if use_pymouse:
             self.mouse = PyMouse()
@@ -51,8 +51,8 @@ class TrackedEvent(object):
 
     def remove_fingers(self):
         """ Remove detected finger upon release. """
- #       if self.fingers == 1:
-#            print('Total Fingers used: ', self.total_event_fingers)
+        if self.fingers == 1:
+            print('Total Fingers used: ', self.total_event_fingers)
         self.fingers -= 1
 
         if (self.fingers == 0 and
@@ -61,7 +61,7 @@ class TrackedEvent(object):
             self.total_event_fingers = 0
             self._initiate_right_click()
 
-        elif (self.fingers == 0 and
+        if (self.fingers == 0 and
                 self.total_event_fingers == 1 and
                 self.moved == 0):
             self.total_event_fingers = 0
@@ -91,14 +91,14 @@ class TrackedEvent(object):
         """ start timing for long press """
         self.track_start = Timer(self.click_delay, self._long_press)
         self.track_start.start()
-#        print('tracking started!!!')
+        print('tracking started!!!')
 
     def _long_press(self):
         if self.fingers == 1 and self.moved == 0:
             self.long_pressed = True
             if self.long_press_workaround:
-                subprocess.call(['xinput', '--disable', self.dev.name])
-                subprocess.call(['xinput', '--enable', self.dev.name])
+               # subprocess.call(['xinput', '--disable', self.dev.name])
+                #subprocess.call(['xinput', '--enable', self.dev.name])
                 self._initiate_right_click()
 
     def _moved_event(self):
@@ -119,7 +119,7 @@ class TrackedEvent(object):
             self.mouse.click(x, y, 2)
 
 
-def initiate_gesture_find(use_pymouse=False, long_press_workaround=False):
+def initiate_gesture_find(use_pymouse=False, long_press_workaround=True):
     """
     This function will scan all input devices until it finds an
     ELAN touchscreen. It will then enter a loop to monitor this device
@@ -127,8 +127,9 @@ def initiate_gesture_find(use_pymouse=False, long_press_workaround=False):
     """
     for device in list_devices():
         dev = InputDevice(device)
-        if (dev.name == 'ELAN Touchscreen') or \
-           (dev.name == 'Atmel Atmel maXTouch Digitizer'):
+#        print(dev)
+        if (dev.name == 'ft6236') or \
+           (dev.name == 'event0'):
             break
     Abs_events = {}
     abilities = {ecodes.EV_ABS: [ecodes.ABS_X, ecodes.ABS_Y],
