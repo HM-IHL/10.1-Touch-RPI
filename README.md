@@ -47,8 +47,8 @@ To install on a Raspberry Pi please follow the instructions below:
 
     sudo python Python_Touchscreen_RightClick.py
 
-*Optional:*
-To make the code run at boot up, add to rc.local
+*Optional:
+To make the code run at boot up, add to rc.local*
 
 8) Edit rc.local:
 
