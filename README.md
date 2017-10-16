@@ -56,7 +56,7 @@ To make the code run at boot up, add to rc.local*
 
 9) Add the following line before exit 0:
 
-    sudo python /home/pi/10.1-Touch-RPI/Python_Touchscreen_Rightclick/Python_Touchscreen_RightClick.py
+    sudo python /10.1-Touch-RPI/Python_Touchscreen_Rightclick/Python_Touchscreen_RightClick.py
 
 10) Reboot the Pi:
 
