@@ -61,3 +61,6 @@ To make the code run at boot up, add to rc.local*
 10) Reboot the Pi:
 
     sudo reboot
+    
+ *Note:*
+ To change the delay for the right clik event, change the variable click_delay in the file named Python_Touchscreen_Right.py
