@@ -37,7 +37,7 @@ class TrackedEvent(object):
         self.discard = 0
         self.moved = 0 
         self.track_start = None
-        self.click_delay = 0.5
+        self.click_delay = 1.5
         self.long_pressed = False
         if use_pymouse:
             self.mouse = PyMouse()
